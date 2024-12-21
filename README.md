@@ -16,4 +16,9 @@ This script scans for available Wi-Fi networks and allows you to perform deauthe
 3. Select networks to attack by entering their N°.
 4. The script will start a deauthentication attack on the selected networks.
 
+
+Wi-Fi Network Scanning: Uses nmcli and airodump-ng to discover nearby Wi-Fi networks with details such as SSID, MAC address, signal strength, encryption type, and more.
+Deauthentication Attack: Select networks to perform a deauthentication attack, sending deauth packets to disconnect devices from the target network.
+User Interaction: Users can select networks to target by entering the corresponding number from the displayed list.
+Monitor Mode Activation: The script automatically starts the monitor mode on the Wi-Fi interface (wlan0) using airmon-ng.
 **Disclaimer:** Use this script only on networks you own or have explicit permission to test.
