@@ -7,9 +7,9 @@ import re
 import time , os  , pygame
 subprocess.run(["sudo","ifconfig"])
 os.system('clear')
-#if not 'SUDO_UID' in os.environ.keys():
-   # print("Try running with sudo.")
-    #exit()
+if not 'SUDO_UID' in os.environ.keys():
+   print("Try running with sudo.")
+   exit()
 command = "nmcli -f SSID,BSSID,SIGNAL,SECURITY,CHAN,FREQ,RATE dev wifi"
 wifi_list = []
 i = 1
