@@ -81,3 +81,4 @@ finally:
     # Stop monitor mode
     subprocess.run(["sudo","airmon-ng", "stop", "wlan0mon"])
     os.system('clear')
+# Badass
