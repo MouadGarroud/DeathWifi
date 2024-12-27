@@ -22,4 +22,4 @@ Monitor Mode Activation: The script automatically starts the monitor mode on the
 3. Select networks to attack by entering their N°.
 4. The script will start a deauthentication attack on the selected networks.
 
-# Badass
+# Mouad Garroud
