@@ -21,5 +21,3 @@ Monitor Mode Activation: The script automatically starts the monitor mode on the
 2. The script will list available Wi-Fi networks.
 3. Select networks to attack by entering their N°.
 4. The script will start a deauthentication attack on the selected networks.
-
-# Mouad Garroud
